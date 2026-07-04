@@ -20,18 +20,15 @@ class Square():
         if kwargs:
             if "width" in kwargs:
                 self.width = kwargs["width"]
-                if "height" in kwargs:
-                    if kwargs["height"] == self.width:
-                        self.height = kwargs["height"]
-                    else:
-                        self.height = self.width
+            if "height" in kwargs:
+                self.height = kwargs["height"]
 
     def area_of_my_square(self):
         """Return the area of the square (width * height).
 
         Returns 0 if the square is invalid (width or height is 0).
         """
-        return self.width * self.width
+        return self.width * self.height
 
     def permiter_of_my_square(self):
         """Return the perimeter of the square (2*width + 2*height).
